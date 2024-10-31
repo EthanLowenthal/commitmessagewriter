@@ -6,8 +6,8 @@ def create_commit(date: datetime):
     with open("out.txt", "a") as f:
         f.write("a")
     subprocess.run(["git", "add", "test.txt"])
-    subprocess.run(["git", "commit", "-m", "some stuff",])
-    subprocess.run(["git", "commit", "--amend", "-m", "some stuff", f'--date="{dateStr}"',])
+    subprocess.run(["git", "commit", "-m", "commit",])
+    subprocess.run(["git", "commit", "--amend", "-m", "commit", f'--date="{dateStr}"',])
     
 def create_commits_for_date(numCommits: int, date: datetime):
     dateStr = date.strftime("%a %b %d %I:%M %Y +0700")
